@@ -11,12 +11,12 @@ body, html {
     justify-content: flex-end; /* Align content to the bottom */
 }
 
-#imageContainer {
+#imageContainera {
     display: flex;
     align-items: flex-end; /* Align images to the bottom of the container */
     gap: 100px; /* 100px gap between images */
     /* position: relative; */
-    top:80vh;
+    /* top:80vh; */
     width: 100%; /* Full width of the container */
     overflow: hidden;
 }
