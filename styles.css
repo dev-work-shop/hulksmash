@@ -16,7 +16,7 @@ body, html {
     align-items: flex-end; /* Align images to the bottom of the container */
     gap: 100px; /* 100px gap between images */
     position: absolute;
-    top:80vh;
+    bottom: 10px;
     width: 100%; /* Full width of the container */
     overflow: hidden;
 }
@@ -24,6 +24,7 @@ body, html {
 .image {
     width: 100px; /* Adjust size as needed */
     height: auto;
+    border-radius:50px;
     animation: moveHorizontal 10s linear infinite;
 }
 
@@ -36,37 +37,30 @@ body, html {
     }
 }
 
-.smash-object {
+.smash-object img.top{
     position: absolute;
     top: 0;
     left: 50%; /* Center horizontally */
-    width: 50px; /* Width of the smash object */
     /* height: 50px;  */
     /* transform: translateX(-50%); Center horizontally */
-    transition: height 50px 1s ease; 
+    /* transition: height 50px 1s ease;  */
     /* background-image: url('hulk.png'); */
     /* transform: translateY(0%); */
 }
-.smashObject img{
-    transition: transform 1s;
-}
 
-.hit {
-    /* transform: translateY(100%); */
-}
-.smash-object.hit img{
+.smash-object img.hit{
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
     transform: rotate(180deg);
     transition: transform 0.5s;
+    
 }
 .hit-back img{
     /* transform: rotate(180deg); */
     transition: transform 0.2s ease-in-out;
 }
-#smash-object.hit{
-    bottom: 0;
-    transition: transform 1s;
-    position: absolute;
-} 
+
 
 
 .navbar {
