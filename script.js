@@ -4,8 +4,8 @@ function moveHands() {
     const object = document.querySelector('.object');
   
     // Move hands inward
-    leftHand.style.left = '150px';
-    rightHand.style.right = '150px';
+    leftHand.style.left = '100px';
+    rightHand.style.right = '100px';
   
     // Shrink the object on collision
     setTimeout(() => {
