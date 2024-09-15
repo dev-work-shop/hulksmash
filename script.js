@@ -1,15 +1,22 @@
-// script.js
-document.getElementById('smashObject').addEventListener('click', () => {
-    const smashObject = document.getElementById('smashObject');
-    // Add class to trigger the smash animation
-    smashObject.classList.add('hit');
-    smashObject.classList.remove('top');
-    // smashObject.classList.remove('hit-back');
-
-    // Reset the effect after animation completes
+function moveHands() {
+    const leftHand = document.querySelector('.left-hand');
+    const rightHand = document.querySelector('.right-hand');
+    const object = document.querySelector('.object');
+  
+    // Move hands inward
+    leftHand.style.left = '150px';
+    rightHand.style.right = '150px';
+  
+    // Shrink the object on collision
     setTimeout(() => {
-        smashObject.classList.remove('hit');
-        smashObject.classList.add('top');
-        // smashObject.classList.add('hit-back');
-    }, 2000); // Duration of the effect, should match the CSS transition time
-});
+      object.style.transform = 'scale(0.1) translate(-50%, -50%)';
+    }, 500);
+  
+    // Reset hands and object after 1.5 seconds
+    setTimeout(() => {
+      leftHand.style.left = '0';
+      rightHand.style.right = '0';
+      object.style.transform = 'translate(-50%, -50%)';
+    }, 1000);
+  }
+  

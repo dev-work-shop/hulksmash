@@ -1,35 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smash Images with Bootstrap</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hulk Hands Collision</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div  class="smash-object">
-        <img  id="smashObject" src="hulk.png" alt="Hulk" class="top">
-    </div> <!-- Object to smash images -->
-    <div class="container text-center my-5">
-        
-        <div id="image-container-id" class="image-container align-items-end">
-            <img src="fox.png" alt="Fox Image" class="image rounded-circle">
-            <img src="ray.png" alt="Ray Image" class="image rounded-circle">
-            <img src="fox2.png" alt="Fox Image" class="image rounded-circle">
-            <img src="ray.png" alt="Ray Image" class="image rounded-circle">
-            <img src="bunty.png" alt="Bunty Image" class="image rounded-circle">
-            <img src="ray.png" alt="Ray Image" class="image rounded-circle">
-            <img src="bunty.png" alt="Ray Image" class="image rounded-circle">
-            <img src="fox2.png" alt="Ray Image" class="image rounded-circle">
-            <img src="ray.png" alt="Ray Image" class="image rounded-circle">
-            
-        </div>
-    </div>
-
-
-    <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script> -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script> -->
-    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> -->
-    <script src="script.js"></script>
+  <div class="scene">
+    <div class="hulk-hand left-hand" onclick="moveHands()"></div>
+    <div class="object"></div>
+    <div class="hulk-hand right-hand" onclick="moveHands()"></div>
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>
