@@ -49,3 +49,15 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+  # Live server job
+  live-server:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Install Live Server
+        run: npm install -g live-server
+      - name: Start Live Server
+        run: live-server ./_site --port=8000
